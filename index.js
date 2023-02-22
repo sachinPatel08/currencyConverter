@@ -22,4 +22,4 @@ const data =async (to ,from ,amount)=>{
 
 // convertMoney("INR" , "USD" ,1)
 
-module.exports = convertMoney
+module.exports = convertMoney()
