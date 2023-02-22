@@ -2,7 +2,7 @@ const axios = require('axios')
 const key = "5ODCy8XHgHblqujC8TBhU20yBXNpCMfv";
 
 
-export const convertMoney = ( from ,to , amount )=>{
+const convertMoney = ( from ,to , amount )=>{
    data(from , to ,amount)
 }
 
@@ -22,3 +22,4 @@ const data =async (to ,from ,amount)=>{
 
 // convertMoney("INR" , "USD" ,1)
 
+module.exports = convertMoney
