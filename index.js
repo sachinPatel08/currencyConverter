@@ -1,11 +1,11 @@
 const axios = require('axios')
-const key = "5ODCy8XHgHblqujC8TBhU20yBXNpCMfv";
+const key = import('./config.js')
 
-exports.data =async function(to ,from ,amount){
+data =async function(to ,from ,amount){
     try {
         const api =await axios.get(`https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${from}&amount=${amount}`,{
             headers:{
-                'apikey':key
+                'apikey':(await key).config.MY_API_KEY
             }
         })
     console.log(api.data)
@@ -15,3 +15,4 @@ exports.data =async function(to ,from ,amount){
 }
 
 
+data("INR","EUR",90)
